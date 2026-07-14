@@ -1,3 +1,4 @@
+<!-- TODO: Re-paste in the Typescript template HTML once this logic is Lit-ified and hosted inside the app-root -->
 <!doctype html>
 <html>
   <head>
@@ -28,9 +29,6 @@
 
     <dialog class="modal modal--existing">
       <label for="collectionLayout">Collection_layout</label>
-      <span class="note"
-        >Find this in the metadata fields for the collection.</span
-      >
       <input name="collectionLayout" />
       <button
         class="form-btn form-btn--generate"
@@ -145,9 +143,6 @@
     </section>
     <section id="results-section">
       <h3>Result</h3>
-      <span class="note"
-        >Paste this into a "collection_layout" metadata field</span
-      >
       <input type="textbox" id="result" />
       <button class="form-btn form-btn--copy" onClick="copyResult()">
         Copy to Clipboard
