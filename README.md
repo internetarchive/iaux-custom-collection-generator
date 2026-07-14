@@ -1,5 +1,7 @@
 ![Build Status](https://github.com/internetarchive/iaux-typescript-wc-template/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/internetarchive/iaux-typescript-wc-template/graph/badge.svg?token=ZOYRJ2BV9W)](https://codecov.io/gh/internetarchive/iaux-typescript-wc-template)
 
+## TODO: Write docs that are specific to this component
+
 # Internet Archive Typescript WebComponent Template
 
 This is a base template for creating Typescript WebComponents. It is based off of the [Open WebComponents generator](https://open-wc.org/docs/development/generator/) with some IA-specific customizations and some development niceities.
@@ -10,6 +12,7 @@ This is a base template for creating Typescript WebComponents. It is based off o
 2. Clone your new repo and update the things below:
 
 ### Things to update in your copy
+
 1. Remove this section
 2. Search for the strings `your-webcomponent` and `YourWebComponent` and those are most of the spots that need to be updated.
 3. `README.md` (this file). Update the readme in general, but also the badge URLs
@@ -19,6 +22,7 @@ This is a base template for creating Typescript WebComponents. It is based off o
 7. Set up a Codecov token (see [Codecov Setup](#codecov-setup))
 
 ## Local Demo with `web-dev-server`
+
 Add `127.0.0.1 local.archive.org` to your `/etc/hosts` file
 
 ```bash
@@ -30,7 +34,9 @@ npm run start
 To run a local development server that serves the basic demo located in `demo/index.html`
 
 ## Testing with Web Test Runner
+
 To run the suite of Web Test Runner tests, run
+
 ```bash
 npm run test
 ```
@@ -42,16 +48,20 @@ npm run test:watch
 ```
 
 ## Releasing alpha and production tagged packages to NPM
+
 ### Releasing alpha and test packages
-- Use your Jira ticket to create your namespace.  This will prevent collision as many people can be simultaneously working in the same repository.
+
+- Use your Jira ticket to create your namespace. This will prevent collision as many people can be simultaneously working in the same repository.
   - run: **`npm version prerelease --preid=wedev-1234`**
     - this command will help auto-increment your alpha package tags inside your jira ticket namespace. refer to [npm versioning docs](https://docs.npmjs.com/cli/v11/commands/npm-version) & [guides for more info on command options](- this command will help auto-increment your alpha package tags inside your jira ticket namespace)
   - run: **`npm publish --tag alpha`** our most used development tags are: alpha, canary
 
 ### Releasing production level package
+
 We like to create a pull request specifically after the expected changes are merged into the main branch.
 Steps:
-- create PR with version number as branch name. Ex, if the next version is 3.2.1, your git command will be:  `git checkout -b v3.2.1`
+
+- create PR with version number as branch name. Ex, if the next version is 3.2.1, your git command will be: `git checkout -b v3.2.1`
   - in the new branch, run the following:
     1. **`git pull --tags`** to fetch all git tags
     2. **`npm version X.X.X`** to set the new tag WITH the commit git tagged
@@ -60,12 +70,15 @@ Steps:
 - Note: version numbers must start at minimum, with 1 (1.x.x) in order for consumers to automatically receive patch updates (no tags starting with 0, like 0.x.x)
 
 ## Linting with ESLint, Prettier, and Types
+
 To scan the project for linting errors, run
+
 ```bash
 npm run lint
 ```
 
 To automatically fix many linting errors, run
+
 ```bash
 npm run format
 ```
@@ -77,7 +90,9 @@ For most of the tools, the configuration is in the `package.json` to reduce the 
 If you customize the configuration a lot, you can consider moving them to individual files.
 
 ### Codecov setup
+
 **Finding your token**
+
 - Log in at https://codecov.io/ with your GitHub account
 - Switch from your personal organization to `internetarchive` if needed, by toggling at the top of the screen or visiting https://app.codecov.io/gh/internetarchive directly
 - Find your repository and hit the `Configure` button or visit `https://app.codecov.io/gh/internetarchive/YOUR-REPO-NAME/config`
@@ -85,12 +100,14 @@ If you customize the configuration a lot, you can consider moving them to indivi
 - Copy everything after `CODECOV_TOKEN=`
 
 **Adding your token**
+
 - Return to your repository and go to `Settings` > `Secrets and variables` (under `Security`) > `Actions`
 - Select `New repository secret`
 - Name your secret `CODECOV_TOKEN` and paste in the token you just copied
 - Select `Add Secret`
 
 **Adding your badge**
+
 - Back in `Configuration` in Codecov, go to the `Badges & Graphs` section
 - Copy the Markdown version of the badge
 - Delete the current Codecov badge at the top of this README and replace it with your new badge
@@ -122,11 +139,13 @@ git push origin gh-pages
 ## Manual Deploy using `gh-pages`
 
 You can update the current Github Page without pushing a commit by running:
+
 ```
 npm run ghpages:publish
 ```
 
 This build script does the following, see `package.json`:
+
 - `ghpages:publish`
   - This executes `ghpages:prepare` in the current branch you are currently working on
     - Note: The branch name is required so that it will not override the whole Github Pages directory
@@ -150,6 +169,7 @@ The live demo app URL from current branch will look something like this:
 ## Automatic Deploy of Demo App
 
 Things that trigger automatic site generation:
+
 - a merge to `main`
   - See workflow: `gh-pages-main.yml`
   - Example: `https://<organization_name_or_username>.github.io/<repo_name>/main`
@@ -164,4 +184,4 @@ Things that trigger automatic site generation:
 
 Another thing to note: pushing a branch up alone will not trigger site creation.
 
-Happy devving ^_^ 🥳  🎉
+Happy devving ^\_^ 🥳 🎉
