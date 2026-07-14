@@ -1,9 +1,9 @@
 {
-  "name": "@internetarchive/your-webcomponent",
+  "name": "@internetarchive/custom-collection-generator",
   "description": "The Internet Archive Typescript WebComponent template.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/internetarchive/iaux-your-webcomponent.git"
+    "url": "git+https://github.com/internetarchive/iaux-custom-collection-generator.git"
   },
   "license": "AGPL-3.0-only",
   "author": "Internet Archive",
