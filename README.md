@@ -2,7 +2,7 @@
 
 ## Demo
 
-<https://internetarchive.github.io/iaux-custom-collection-generator/demo>
+<https://internetarchive.github.io/iaux-custom-collection-generator>
 
 ## TODO: Write docs that are specific to this component
 
