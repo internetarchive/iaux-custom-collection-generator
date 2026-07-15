@@ -1,5 +1,9 @@
 ![Build Status](https://github.com/internetarchive/iaux-typescript-wc-template/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/internetarchive/iaux-typescript-wc-template/graph/badge.svg?token=ZOYRJ2BV9W)](https://codecov.io/gh/internetarchive/iaux-typescript-wc-template)
 
+## Demo
+
+<https://internetarchive.github.io/iaux-custom-collection-generator/demo>
+
 ## TODO: Write docs that are specific to this component
 
 # Internet Archive Typescript WebComponent Template
